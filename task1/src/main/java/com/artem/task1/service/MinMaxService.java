@@ -4,7 +4,7 @@ import com.artem.task1.entity.ArrayEntity;
 
 import java.util.OptionalInt;
 
-public interface MinMax {
+public interface MinMaxService {
 
     OptionalInt findMin(ArrayEntity array);
 

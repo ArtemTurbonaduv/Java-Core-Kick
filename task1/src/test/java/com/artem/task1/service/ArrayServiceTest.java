@@ -17,9 +17,9 @@ class ArrayServiceTest {
     private static final int EXPECTED_SUM = 30;
     private static final double EXPECTED_AVG = 5;
 
-    private final MinMax minMax = new MinMaxImpl();
-    private final Sort sort = new SortImpl();
-    private final SumAverage sumAverage = new SumAverageImpl();
+    private final MinMaxService minMax = new MinMaxServiceImpl();
+    private final SortService sort = new SortServiceImpl();
+    private final SumAverageService sumAverage = new SumAverageServiceImpl();
 
     @Test
     void findMinPositive() {

@@ -1,12 +1,12 @@
 package com.artem.task1.service.impl;
 
 import com.artem.task1.entity.ArrayEntity;
-import com.artem.task1.service.SumAverage;
+import com.artem.task1.service.SumAverageService;
 
 import java.util.OptionalInt;
 import java.util.OptionalDouble;
 
-public class SumAverageImpl implements SumAverage {
+public class SumAverageServiceImpl implements SumAverageService {
 
     @Override
     public OptionalInt sum(ArrayEntity array) {

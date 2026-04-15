@@ -1,11 +1,11 @@
 package com.artem.task1.app;
 
 import com.artem.task1.entity.ArrayEntity;
-import com.artem.task1.factory.ArrayFactory;
-import com.artem.task1.parser.ArrayParser;
+import com.artem.task1.factory.impl.ArrayFactoryImpl;
+import com.artem.task1.parser.impl.ArrayParserImpl;
 import com.artem.task1.reader.impl.ArrayReaderImpl;
-import com.artem.task1.service.Sort;
-import com.artem.task1.service.impl.SortImpl;
+import com.artem.task1.service.SortService;
+import com.artem.task1.service.impl.SortServiceImpl;
 import com.artem.task1.validator.ArrayValidator;
 
 import java.util.ArrayList;
@@ -17,9 +17,9 @@ public class Main {
 
         ArrayReaderImpl reader = new ArrayReaderImpl();
         ArrayValidator validator = new ArrayValidator();
-        ArrayParser parser = new ArrayParser();
-        ArrayFactory factory = new ArrayFactory();
-        Sort service = new SortImpl();
+        ArrayParserImpl parser = new ArrayParserImpl();
+        ArrayFactoryImpl factory = new ArrayFactoryImpl();
+        SortService service = new SortServiceImpl();
 
         List<String> lines = reader.readLines("data/input.txt");
         List<ArrayEntity> arrays = new ArrayList<>();

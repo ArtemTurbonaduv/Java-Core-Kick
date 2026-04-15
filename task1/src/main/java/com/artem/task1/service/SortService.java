@@ -2,7 +2,7 @@ package com.artem.task1.service;
 
 import com.artem.task1.entity.ArrayEntity;
 
-public interface Sort {
+public interface SortService {
 
     void bubbleSort(ArrayEntity array);
 

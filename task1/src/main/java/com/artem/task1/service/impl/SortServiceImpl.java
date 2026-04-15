@@ -1,9 +1,9 @@
 package com.artem.task1.service.impl;
 
 import com.artem.task1.entity.ArrayEntity;
-import com.artem.task1.service.Sort;
+import com.artem.task1.service.SortService;
 
-public class SortImpl implements Sort {
+public class SortServiceImpl implements SortService {
 
     @Override
     public void bubbleSort(ArrayEntity array) {

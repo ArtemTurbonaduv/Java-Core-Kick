@@ -1,11 +1,11 @@
 package com.artem.task1.service.impl;
 
 import com.artem.task1.entity.ArrayEntity;
-import com.artem.task1.service.MinMax;
+import com.artem.task1.service.MinMaxService;
 
 import java.util.OptionalInt;
 
-public class MinMaxImpl implements MinMax {
+public class MinMaxServiceImpl implements MinMaxService {
 
     @Override
     public OptionalInt findMin(ArrayEntity array) {

@@ -15,7 +15,7 @@ public class ArrayReaderImpl implements ArrayReader {
         try {
             return Files.readAllLines(Path.of(path));
         } catch (IOException e) {
-            throw new ArrayException("Error reading file");
+            throw new ArrayException("Error reading file", e);
         }
     }
 }

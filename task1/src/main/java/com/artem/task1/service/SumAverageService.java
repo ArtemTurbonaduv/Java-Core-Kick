@@ -7,7 +7,7 @@ import java.util.OptionalDouble;
 
 public interface SumAverageService {
 
-    OptionalInt sum(ArrayEntity array);
+    OptionalInt findSum(ArrayEntity array);
 
-    OptionalDouble average(ArrayEntity array);
+    OptionalDouble findAverage(ArrayEntity array);
 }

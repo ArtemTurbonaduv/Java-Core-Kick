@@ -12,7 +12,6 @@ public class SortServiceImpl implements SortService {
         }
 
         int[] data = array.getData();
-
         for (int i = 0; i < data.length - 1; i++) {
             boolean swapped = false;
 
@@ -29,6 +28,7 @@ public class SortServiceImpl implements SortService {
                 break;
             }
         }
+        array.setData(data);
     }
 
     @Override
@@ -39,7 +39,6 @@ public class SortServiceImpl implements SortService {
 
         int[] data = array.getData();
         int n = data.length;
-
         for (int i = 1; i < n; i++) {
             int key = data[i];
             int j = i - 1;
@@ -50,5 +49,6 @@ public class SortServiceImpl implements SortService {
             }
             data[j + 1] = key;
         }
+        array.setData(data);
     }
 }

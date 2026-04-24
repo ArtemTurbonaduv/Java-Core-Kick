@@ -9,7 +9,7 @@ import java.util.OptionalDouble;
 public class SumAverageServiceImpl implements SumAverageService {
 
     @Override
-    public OptionalInt sum(ArrayEntity array) {
+    public OptionalInt findSum(ArrayEntity array) {
         int[] data = array.getData();
 
         if (data == null || data.length == 0) {
@@ -26,8 +26,8 @@ public class SumAverageServiceImpl implements SumAverageService {
     }
 
     @Override
-    public OptionalDouble average(ArrayEntity array) {
-        OptionalInt sumOpt = sum(array);
+    public OptionalDouble findAverage(ArrayEntity array) {
+        OptionalInt sumOpt = findSum(array);
 
         if (sumOpt.isEmpty()) {
             return OptionalDouble.empty();

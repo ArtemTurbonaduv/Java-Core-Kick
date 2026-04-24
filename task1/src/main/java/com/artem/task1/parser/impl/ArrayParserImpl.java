@@ -2,8 +2,6 @@ package com.artem.task1.parser.impl;
 
 import com.artem.task1.parser.ArrayParser;
 
-import java.util.Arrays;
-
 public class ArrayParserImpl implements ArrayParser {
     private static final String DELIMITER_LINE_REGEX = "[,;\\s]+";
 

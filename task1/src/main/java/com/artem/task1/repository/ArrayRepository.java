@@ -11,7 +11,7 @@ public interface ArrayRepository {
 
     void removeArray(ArrayEntity arrayEntity);
 
-    void sortArrays(Comparator<ArrayEntity> comparator);
+    List<ArrayEntity> sortArrays(Comparator<ArrayEntity> comparator);
 
     List<ArrayEntity> queryArray(Predicate<ArrayEntity> predicate);
 }

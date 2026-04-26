@@ -2,6 +2,7 @@ package com.artem.task1.repository.specification;
 
 import com.artem.task1.entity.ArrayEntity;
 import com.artem.task1.entity.ArrayStatistics;
+import com.artem.task1.specification.impl.*;
 import com.artem.task1.warehouse.ArrayWarehouse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,7 @@ class SpecificationsTest {
     void sumGreaterPositive() {
         SumGreaterSpecification spec = new SumGreaterSpecification(100);
 
-        boolean result = spec.test(array);
+        boolean result = spec.specify(array);
 
         assertTrue(result);
     }
@@ -37,7 +38,7 @@ class SpecificationsTest {
     void sumLessPositive() {
         SumLessSpecification spec = new SumLessSpecification(200);
 
-        boolean result = spec.test(array);
+        boolean result = spec.specify(array);
 
         assertTrue(result);
     }
@@ -46,7 +47,7 @@ class SpecificationsTest {
     void maxGreaterPositive() {
         MaxGreaterSpecification spec = new MaxGreaterSpecification(40);
 
-        boolean result = spec.test(array);
+        boolean result = spec.specify(array);
 
         assertTrue(result);
     }
@@ -55,7 +56,7 @@ class SpecificationsTest {
     void maxLessPositive() {
         MaxLessSpecification spec = new MaxLessSpecification(55);
 
-        boolean result = spec.test(array);
+        boolean result = spec.specify(array);
 
         assertTrue(result);
     }
@@ -64,7 +65,7 @@ class SpecificationsTest {
     void minLessPositive() {
         MinLessSpecification spec = new MinLessSpecification(20);
 
-        boolean result = spec.test(array);
+        boolean result = spec.specify(array);
 
         assertTrue(result);
     }
@@ -73,7 +74,7 @@ class SpecificationsTest {
     void minGreaterPositive() {
         MinGreaterSpecification spec = new MinGreaterSpecification(9);
 
-        boolean result = spec.test(array);
+        boolean result = spec.specify(array);
 
         assertTrue(result);
     }
@@ -82,7 +83,7 @@ class SpecificationsTest {
     void averageGreaterPositive() {
         AverageGreaterSpecification spec = new AverageGreaterSpecification(25.0);
 
-        boolean result = spec.test(array);
+        boolean result = spec.specify(array);
 
         assertTrue(result);
     }
@@ -91,7 +92,7 @@ class SpecificationsTest {
     void averageLessPositive() {
         AverageLessSpecification spec = new AverageLessSpecification(30.1);
 
-        boolean result = spec.test(array);
+        boolean result = spec.specify(array);
 
         assertTrue(result);
     }

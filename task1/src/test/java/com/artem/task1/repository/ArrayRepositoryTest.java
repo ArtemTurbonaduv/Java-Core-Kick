@@ -22,17 +22,16 @@ class ArrayRepositoryTest {
         repository.addArray(array1);
         repository.addArray(array2);
 
-        repository.sortArrays(new ArrayIdComparator());
-
+        List<ArrayEntity> sorted = repository.sortArrays(new ArrayIdComparator());
         List<ArrayEntity> all = repository.queryArray(array -> true);
         List<ArrayEntity> query = repository.queryArray(a -> a.getId() % 2 == 0);
 
         assertAll(
                 () -> assertEquals(3, all.size()),
                 () -> assertTrue(all.containsAll(List.of(array1, array2, array3))),
-                () -> assertEquals(1L, all.get(0).getId()),
-                () -> assertEquals(2L, all.get(1).getId()),
-                () -> assertEquals(3L, all.get(2).getId()),
+                () -> assertEquals(1L, sorted.get(0).getId()),
+                () -> assertEquals(2L, sorted.get(1).getId()),
+                () -> assertEquals(3L, sorted.get(2).getId()),
                 () -> assertEquals(1, query.size()),
                 () -> assertTrue(query.contains(array2))
         );
